@@ -23,13 +23,14 @@ allnum = 0
 headers = {
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36'
     }
-temp = 'buvid3=D0E81D21-FDEB-7BD5-6F7D-2C47E706366A26437infoc; b_nut=1665204926; i-wanna-go-back=-1; b_ut=5; _uuid=C7E54D95-4B66-A897-4D510-52FF35210A57E27690infoc; buvid_fp=a4129ba7e787907d042b5af64c89a5db; buvid4=D2D1D71F-32F4-7542-0677-DA71B2ECA4C728183-022100812-YyeQqvp3XSOoX3CaUB5r+Q%3D%3D; fingerprint=a4129ba7e787907d042b5af64c89a5db; buvid_fp_plain=undefined; SESSDATA=557cd98e%2C1688470503%2Cd36b2%2A11; bili_jct=782440ecc6d00851edf13be5a9bbeed1; DedeUserID=175878648; DedeUserID__ckMd5=6f7cf02b122a299b; sid=7pfhwuer; CURRENT_FNVAL=4048; blackside_state=1; rpdid=|(J|~|YlYRu|0J\'uYYmlYm)~~; innersign=1; b_lsid=7DFB10C86_18581B6857E'
+
+# temp里面放自己的B站cookie
+temp = ''
 cookie_list = temp.split(';')
 cookies = {cookie.split('=')[0]: cookie.split('=')[-1] for cookie in cookie_list}
 
 proxy_list = [
   {"http":"113.100.209.123"},
-  # {"http":"202.109.157.61"},
   {"http":"202.109.157.60"},
 ]
 proxy = random.choice(proxy_list)
